@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .flex {
+        display: flex;
+        max-width: 50vw;
+        margin: auto;
+      }
+      .flex > div {
+        flex-basis: 20%;
+        height: 150px;
+        margin: 15px;
+        border-radius: 4px;
+        background-color: teal;
+      }
+      .grid {
+        display: grid;
+        max-width: 50vw;
+        margin: auto;
+        grid-template: "";
+        grid-template-columns: repeat(5, 150px);
+        grid-template-rows: repeat(3, 150px);
+        grid-gap: 30px;
+      }
+      .grid > div {
+        background-color: teal;
+        border-radius: 4px;
+      }
+      #item2 {
+        grid-area: 1/2 / span 1 / span 3;
+      }
+      #item3 {
+        grid-area: 2 /1 / span 1 / span 3;
+      }
+      #item13 {
+        grid-area: 3 /3 / span 1 / span 3;
+      }
+      .gridN {
+        display: grid;
+        max-width: 80vw;
+        margin: auto;
+        grid-template:
+          "a a a"
+          "b b c"
+          "b b d"
+          "b b e";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-gap: 30px;
+      }
+      div > #itema {
+        background-color: yellow;
+        border-radius: 4px;
+        height: 50px;
+      }
+      div > #itemb {
+        background-color: red;
+        border-radius: 4px;
+        height: 500px;
+      }
+      div > #itemc {
+        background-color: greenyellow;
+        border-radius: 4px;
+        height: 146px;
+      }
+      div > #itemd {
+        background-color: greenyellow;
+        border-radius: 4px;
+        height: 146px;
+      }
+      div > #iteme {
+        background-color: greenyellow;
+        border-radius: 4px;
+        height: 146px;
+      }
+
+      #itema {
+        grid-area: a;
+      }
+      #itemb {
+        grid-area: b;
+      }
+      #itemc {
+        grid-area: c;
+      }
+      #itemd {
+        grid-area: d;
+      }
+      #iteme {
+        grid-area: e;
+      }
+
+      @media (max-width: 700px) {
+        .gridN {
+          display: grid;
+          max-width: 80vw;
+          margin: auto;
+          grid-template:
+            "a a a"
+            "b b b"
+            "c c c"
+            "d d d"
+            "e e e";
+          grid-template-columns: auto;
+          grid-template-rows: auto;
+          grid-gap: 30px;
+        }
+      }
+      @media (min-width: 700px) {
+        .gridN {
+          display: grid;
+          max-width: 80vw;
+          margin: auto;
+          grid-template:
+            "a a a"
+            "b b b"
+            "c d e";
+          grid-template-columns: auto;
+          grid-template-rows: auto;
+          grid-gap: 30px;
+        }
+      }
+
+      @media (max-width: 980px) {
+        .gridN {
+          display: grid;
+          max-width: 80vw;
+          margin: auto;
+          grid-template:
+            "a a a"
+            "b b b"
+            "c d e";
+          grid-template-columns: auto;
+          grid-template-rows: auto;
+          grid-gap: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex">
+      <div></div>
+    </div>
+    <div class="flex">
+      <div></div>
+      <div></div>
+    </div>
+    <div class="flex">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="flex">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <hr />
+    <div class="grid">
+      <div id="item1"></div>
+      <div id="item2"></div>
+      <div id="item3"></div>
+      <div id="item4"></div>
+      <div id="item5"></div>
+      <div id="item6"></div>
+      <div id="item7"></div>
+      <div id="item8"></div>
+      <div id="item9"></div>
+      <div id="item10"></div>
+      <div id="item11"></div>
+      <div id="item12"></div>
+      <div id="item13"></div>
+      <div id="item14"></div>
+      <div id="item15"></div>
+    </div>
+    <hr />
+
+    <div class="gridN">
+      <div id="itema">NAVIGATION BOX</div>
+      <div id="itemb">LEFT BOX</div>
+      <div id="itemc">RIGHT BOX 1</div>
+      <div id="itemd">RIGHT BOX 2</div>
+      <div id="iteme">RIGHT BOX 3</div>
+    </div>
+  </body>
+</html>
